@@ -17,7 +17,7 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
+    background: #253053; /* Background pattern from Subtle Patterns */
     font-family: 'Coda', cursive;
 }
 
@@ -31,6 +31,7 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    color: rgb(230, 224, 235);
 }
 
 /*
@@ -40,7 +41,7 @@ h1 {
 .deck {
     width: 660px;
     min-height: 680px;
-    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    background: linear-gradient(160deg, #71a2f1 0%, #f9bcfb 100%);
     padding: 32px;
     border-radius: 10px;
     box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
@@ -49,6 +50,12 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin: 0 0 3em;
+}
+
+.deck-mask {
+    position: absolute;
+    width: 660px;
+    min-height: 680px;
 }
 
 .deck .card {
@@ -67,7 +74,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #58a3e0;
     cursor: default;
 }
 
@@ -77,12 +84,12 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #02ccba;
+    background: #d172b9;
     font-size: 33px;
 }
 .deck .card.error {
     cursor: default;
-    background: orange;
+    background: #d172b9;
     font-size: 33px;
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s; 
@@ -125,7 +132,8 @@ h1 {
     margin: 0 5px 0 0;
 }
 
-.score-panel .stars li {
+.stars li,
+.modal-stars li {
     list-style: none;
     display: inline-block;
 }
@@ -133,4 +141,19 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    padding: 20px;
+    background-color: rgb(191, 155, 207);
+    border-radius: 5px;
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top:380px;
+
 }
